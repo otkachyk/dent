@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %title Dent
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    %link{:href => "https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600", :rel => "stylesheet"}
+    = csrf_meta_tags
+  %body
+    .container
+      = render 'layouts/navigation'
+    #main{:role => "main"}
+      .container
+        = render 'layouts/messages'
+        = yield
+      .container
+        %footer
+          %hr
+          &copy; 2012 - #{Date.today.year} Dentistry
+
+
