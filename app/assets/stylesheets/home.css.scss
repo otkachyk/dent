@@ -3,7 +3,7 @@
   height: 20vw;
   display: flex;
   flex-wrap: nowrap;
-  background-color: red;
+  background-color: white;
 }
 
 .main-navigation-item {
@@ -20,22 +20,44 @@
 .main-navigation-item a{
   text-decoration: none;
   display: flex;
+  color: black;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
 }
 
-.wow {
+.navigation-item-link {
 }
 
+.main-navigation-item {
+  margin: 5px;
+  border: 1px solid #465775;
+}
 
-.main-navigation > :nth-child(1) {
-  background: #e5e5e5;
+.main-navigation-item a:hover {
+background: #465775;
+color: white;
+
+  /*opacity: 1;*/
+  /*-webkit-animation: flash 1.5s;*/
+  /*animation: flash 1.5s;*/
 }
-.main-navigation > :nth-child(2) {
-  background: #b3bBbF;
+/*@-webkit-keyframes flash {
+  0% {
+    opacity: .4;
+    background: #465775;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.main-navigation > :nth-child(3) {
-  background: #EF7D40;
-}
+@keyframes flash {
+  0% {
+    background: #465775;
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}*/
