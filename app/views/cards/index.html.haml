@@ -1,0 +1,7 @@
+%ul.breadcrumb
+  %li
+    =link_to t("index"), root_path
+    %span.divider
+  %li.active
+    =t("cards.plural")
+= link_to "Ds", new_card_path, class: "btn, btn-primary"
