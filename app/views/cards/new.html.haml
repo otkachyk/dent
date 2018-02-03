@@ -6,5 +6,6 @@
     =link_to t("cards.plural"), cards_path
     %span.divider
   %li.active
-    =t("goals.new")
-render 'cards/form'
+    =t("cards.new")
+.div-centered
+  = render 'cards/form'

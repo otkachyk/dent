@@ -4,4 +4,11 @@
     %span.divider
   %li.active
     =t("cards.plural")
-= link_to "Ds", new_card_path, class: "btn, btn-primary"
+= link_to "Нова медична картка пацієнта", new_card_path, class: "btn, btn-primary"
+.cards
+  - @cards.each do |c|
+    .card
+      %p Прізвище: #{c.l_name}
+      %p Ім'я: #{c.f_name}
+      %p По-батькові: #{c.m_name}
+      %p Телефон: #{c.tel}

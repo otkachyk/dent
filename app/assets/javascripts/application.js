@@ -12,5 +12,7 @@
 //
 //= require rails-ujs
 //= require jquery
+//= require bootstrap-datepicker/core
 //= require bootstrap-sprockets
+
 //= require_tree .
