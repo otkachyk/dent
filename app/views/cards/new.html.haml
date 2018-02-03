@@ -1,0 +1,11 @@
+%ul.breadcrumb
+  %li
+    =link_to t("index"), root_path
+    %span.divider
+  %li
+    =link_to t("cards.plural"), cards_path
+    %span.divider
+  %li.active
+    =t("cards.new")
+.div-centered
+  = render 'cards/form'
