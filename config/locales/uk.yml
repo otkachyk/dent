@@ -266,6 +266,14 @@ uk:
   cards:
     plural: "Медичні картки"
     new: "Нова картка"
+    new_card:
+      f_name: "Ім'я"
+      l_name: "Прізвище"
+      m_name: "По-батькові"
+      b_day: "День народження"
+      tel: "Телефон"
+      gender: "Стать"
+      create: "Створити картку"
   index: "Головна"
   notice:
     cards:

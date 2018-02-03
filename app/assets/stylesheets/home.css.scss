@@ -27,37 +27,12 @@
   height: 100%;
 }
 
-.navigation-item-link {
-}
-
 .main-navigation-item {
   margin: 5px;
   border: 1px solid #465775;
 }
 
 .main-navigation-item a:hover {
-background: #465775;
-color: white;
-
-  /*opacity: 1;*/
-  /*-webkit-animation: flash 1.5s;*/
-  /*animation: flash 1.5s;*/
+  background: #465775;
+  color: white;
 }
-/*@-webkit-keyframes flash {
-  0% {
-    opacity: .4;
-    background: #465775;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes flash {
-  0% {
-    background: #465775;
-    opacity: .4;
-  }
-  100% {
-    opacity: 1;
-  }
-}*/

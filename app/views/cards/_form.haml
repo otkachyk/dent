@@ -1,9 +1,9 @@
 = simple_form_for(@card, html: { class: 'form-horizontal, new-cards-form' }) do |f|
-  = f.input :f_name, label: "Ім'я"
-  = f.input :m_name, label: "По-батькові"
-  = f.input :l_name, label: "Прізвище"
-  = f.input :birthday, as: :date, start_year: Time.now.year - 110, end_year: Time.now.year, label: "Дата народження"
-  = f.input :tel, as: :tel, label: "Телефон"
-  = f.input :gender, as: :radio_buttons, collection: [['0', 'Жіноча'], ['1', 'Чоловіча']], label_method: :second, value_method: :first, label: "Стать"
+  = f.input :f_name, label: t('cards.new_card.f_name')
+  = f.input :m_name, label: t('cards.new_card.m_name')
+  = f.input :l_name, label: t('cards.new_card.l_name')
+  = f.input :birthday, as: :date, start_year: Time.now.year - 110, end_year: Time.now.year, label: t('cards.new_card.b_day')
+  = f.input :tel, as: :tel, label: t('cards.new_card.tel')
+  = f.input :gender, as: :radio_buttons, collection: [['0', 'Жіноча'], ['1', 'Чоловіча']], label_method: :second, value_method: :first, label: t('cards.new_card.gender')
 
-  = f.submit "Створити картку", class: "btn btn-success"
+  = f.submit t('cards.new_card.create'), class: "btn btn-success"
