@@ -23,10 +23,14 @@ class AppointmentsController < ApplicationController
   def create
     # binding.pry
     @appointment = Appointment.new(appointment_params)
-
-    if @appointment.save
+    if @appointment.save || @appointment.valid?
       redirect_to appointments_path, notice: t("notice.card.created")
     else
+      @appointment = Appointment.new(appointment_params)
+      @departaments = Departament.all
+      @patients = Card.all
+      @users = []
+      flash.now[:error] =  t("errors.appointment.fill")
       render action: :new
     end
   end

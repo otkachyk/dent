@@ -3,26 +3,27 @@
   -# = binding.pry
   .appointment-select
     %label{for: "appointment_card"}
-      %select{ class: "js-example-basic-single", name: "appointment[card_id]", id: "appointment_card" }
-        %option Select patient
+      
+      %select{ class: "js-select-2", name: "appointment[card_id]", id: "appointment_card" }
+        %option{disabled: :disabled, selected: :selected } Select patient
         - @patients.each do |u|
-          %option{value: u.id}= u.f_name
+          %option{ @appointment.card == u ? {selected: :selected} : {}, value: u.id}= u.f_name
   .appointment-select
     %label{for: "appointment_departament"}
-      %select{ class: "js-example-basic-single", id: "appointment_departament" }
-        %option Select Departament
+      %select{ class: "js-select-2", id: "appointment_departament" }
+        %option{disabled: :disabled, selected: :selected } Select Departament
         - @departaments.each do |d|
-          %option{value: d.id}= d.name
+          %option{ value: d.id }= d.name
   .appointment-select
     %label{for: "appointment_user"}
-      %select{class: "js-example-basic-single", name: "appointment[user_id]", id: "appointment_user"}
-        %option Select doctor
+      %select{class: "js-select-2", name: "appointment[user_id]", id: "appointment_user"}
+        %option{disabled: :disabled, selected: :selected } Select doctor
         - @users.each do |u|
           %option{value: u.id}= u.name
 
-  = f.submit
+  = f.submit "Створити запис", class: "btn btn-success"
 
 :javascript
   $(document).ready(function() {
-      $('.js-example-basic-single').select2();
+      $('.js-select-2').select2({ width: '100%' });
   });
