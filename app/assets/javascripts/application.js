@@ -12,7 +12,8 @@
 //
 //= require rails-ujs
 //= require jquery
-//= require bootstrap-datepicker/core
 //= require bootstrap-sprockets
-
+//= require appointments
+//= require select2
+//= require select2_locale_uk
 //= require_tree .

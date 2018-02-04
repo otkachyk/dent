@@ -1,0 +1,8 @@
+%ul.breadcrumb
+  %li
+    = link_to t("index"), root_path
+    %span.divider
+  %li.active
+    = t("appointment.plural")
+
+= link_to t("appointment.new"), new_appointment_path

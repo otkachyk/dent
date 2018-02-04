@@ -263,7 +263,7 @@ uk:
       long: "%d %B %Y, %H:%M"
       short: "%d %b, %H:%M"
     pm: по полудні
-  cards:
+  card:
     plural: "Медичні картки"
     new: "Нова картка"
     new_card:
@@ -274,7 +274,10 @@ uk:
       tel: "Телефон"
       gender: "Стать"
       create: "Створити картку"
+  appointment:
+    plural: "Записи до лікарів"
+    new: "Новий запис"
   index: "Головна"
   notice:
-    cards:
+    card:
       created: "Медичну картку створено!"

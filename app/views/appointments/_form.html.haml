@@ -1,0 +1,33 @@
+=simple_form_for @appointment do |f|
+  -# = f.input :user_id, collection: User.all.collect {|u| [ u.name, u.id ] }, as: :select
+  -# = f.input :card_id, collection: Card.all.collect {|c| [ c.f_name, c.id ] }, as: :select
+  = f.input :meeting_time, minute_step: 15, start_hour: 9, end_hour: 18, as: :date
+  -# = binding.pry
+  .appointment-select
+    %label{for: "appointment_card"}
+      Patient
+      %select{ class: "js-example-basic-multiple", name: "appointment[card_id]", id: "appointment_card" }
+        %option Select patient
+        - @patients.each do |u|
+          %option{value: u.id}= u.f_name
+  .appointment-select
+    %label{for: "appointment_departament"}
+      departament
+      %select{ class: "js-example-basic-multiple", id: "appointment_departament" }
+        %option Select Departament
+        - @departaments.each do |d|
+          %option{value: d.id}= d.name
+  .appointment-select
+    %label{for: "appointment_user"}
+      doctor
+      %select{class: "js-example-basic-multiple", name: "appointment[user_id]", id: "appointment_user"}
+        %option Select doctor
+        - @users.each do |u|
+          %option{value: u.id}= u.name
+
+  = f.submit
+
+:javascript
+  $(document).ready(function() {
+      $('.js-example-basic-multiple').select2();
+  });

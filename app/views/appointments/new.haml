@@ -1,0 +1,9 @@
+%ul.breadcrumb
+  %li
+    = link_to t('index'), root_path
+    %span.divider
+  %li
+    = link_to t('appointment.plural'), appointments_path
+  %li.active
+    = t('appointment.new')
+= render 'appointments/form'
