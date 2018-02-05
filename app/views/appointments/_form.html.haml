@@ -1,9 +1,9 @@
 =simple_form_for(@appointment, html: { class: 'form-horizontal, new-appointments-form' }) do |f|
-  = f.input :meeting_time, minute_step: 15, start_hour: 9, end_hour: 18, as: :date
+  = f.input :meeting_time, minute_step: 15, start_hour: 9, end_hour: 18, as: :datetime
   -# = binding.pry
   .appointment-select
     %label{for: "appointment_card"}
-      
+
       %select{ class: "js-select-2", name: "appointment[card_id]", id: "appointment_card" }
         %option{disabled: :disabled, selected: :selected } Select patient
         - @patients.each do |u|
