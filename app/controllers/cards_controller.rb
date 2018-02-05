@@ -12,7 +12,7 @@ class CardsController < ApplicationController
     @card = Card.new(card_params)
 
     if @card.save
-      redirect_to cards_path, notice: t("notice.cards.created")
+      redirect_to cards_path, notice: t("notice.card.created")
     else
       render action: :new
     end

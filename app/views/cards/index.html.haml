@@ -3,7 +3,7 @@
     =link_to t("index"), root_path
     %span.divider
   %li.active
-    =t("cards.plural")
+    =t("card.plural")
 = link_to "Нова медична картка пацієнта", new_card_path, class: "btn, btn-primary"
 .cards
   - @cards.each do |c|

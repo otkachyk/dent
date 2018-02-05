@@ -1,0 +1,29 @@
+=simple_form_for(@appointment, html: { class: 'form-horizontal, new-appointments-form' }) do |f|
+  = f.input :meeting_time, minute_step: 15, start_hour: 9, end_hour: 18, as: :datetime
+  -# = binding.pry
+  .appointment-select
+    %label{for: "appointment_card"}
+
+      %select{ class: "js-select-2", name: "appointment[card_id]", id: "appointment_card" }
+        %option{disabled: :disabled, selected: :selected } Select patient
+        - @patients.each do |u|
+          %option{ @appointment.card == u ? {selected: :selected} : {}, value: u.id}= u.f_name
+  .appointment-select
+    %label{for: "appointment_departament"}
+      %select{ class: "js-select-2", id: "appointment_departament" }
+        %option{disabled: :disabled, selected: :selected } Select Departament
+        - @departaments.each do |d|
+          %option{ value: d.id }= d.name
+  .appointment-select
+    %label{for: "appointment_user"}
+      %select{class: "js-select-2", name: "appointment[user_id]", id: "appointment_user"}
+        %option{disabled: :disabled, selected: :selected } Select doctor
+        - @users.each do |u|
+          %option{value: u.id}= u.name
+
+  = f.submit "Створити запис", class: "btn btn-success"
+
+:javascript
+  $(document).ready(function() {
+      $('.js-select-2').select2({ width: '100%' });
+  });
