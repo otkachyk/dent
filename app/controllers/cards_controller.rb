@@ -5,10 +5,12 @@ class CardsController < ApplicationController
   end
 
   def new
+    authorize! :new, Card
     @card = Card.new
   end
 
   def create
+    authorize! :create, Card
     @card = Card.new(card_params)
 
     if @card.save
