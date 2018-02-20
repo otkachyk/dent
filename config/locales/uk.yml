@@ -281,3 +281,20 @@ uk:
   notice:
     card:
       created: "Медичну картку створено!"
+    departament:
+      created: "Відділ створено!"
+      updated: "Відділ оновлено!"
+      deleted: "Відділ видалено!"
+  menu:
+    departament:
+      plural: "Відділи"
+    user:
+      plural: "Користувачі"
+  departament:
+    new: "Новий відділ"
+    create: "Створити новий відділ"
+    update: "Змінити інформацію"
+  action:
+    edit: "Змінити"
+    delete: "Видалити"
+    show: "Деталі"

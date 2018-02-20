@@ -1,0 +1,15 @@
+.button{style: "padding: 15px;"}
+  = link_to t("departament.new"), new_departament_path, class: "btn btn-primary"
+%table.table.table-hover
+  %tr
+    %th Назва відділу
+    %th Кількість лікарів
+    %th
+
+  - @departaments.each do |d|
+    %tr
+      %td= link_to d.name, departament_path(d)
+      %td= d.users.count
+      %td.btn-group.btn-group-sm.pull-right
+        = link_to t("action.edit"), edit_departament_path(d), class: 'btn btn-success'
+        = link_to t("action.delete"), departament_path(d), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-mini btn-danger'

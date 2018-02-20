@@ -1,7 +1,11 @@
 .navigation-bar
-  %ul.nav
-    %li= link_to "LOGO", root_path
-  %ul.nav
+  %ul.nav.navbar-nav
+    %li= link_to 'LOGO', root_path
+  %ul.nav.nav-pills
+    - if user_signed_in? && current_user.has_role?(:admin)
+      %li{class: active_class(departaments_path)}= link_to t('menu.departament.plural'), departaments_path
+      %li{class: active_class(users_path)}= link_to t('menu.user.plural'), users_path
+      %li{class: active_class(cards_path)}= link_to t('menu.card.plural'), cards_path
     - if user_signed_in?
       %li= link_to('Logout', destroy_user_session_path, method: :delete)
     - else

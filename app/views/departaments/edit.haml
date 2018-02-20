@@ -1,0 +1,7 @@
+%ul.breadcrumb
+  %li
+    =link_to t("menu.departament.plural"), departaments_path
+    %span.divider
+  %li.active
+    =t("departament.new")
+= render 'departaments/form'

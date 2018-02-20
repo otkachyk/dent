@@ -1,0 +1,11 @@
+.sa
+.main-navigation
+  .main-navigation-item
+    =link_to appointments_path do
+      .navigation-item-link #{ t("appointment.plural") }
+  .main-navigation-item
+    =link_to cards_path do
+      .navigation-item-link #{ t("card.plural") }
+  .main-navigation-item
+    =link_to "#{}" do
+      .navigation-item-link Other
