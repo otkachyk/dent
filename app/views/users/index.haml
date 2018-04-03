@@ -12,5 +12,6 @@
       %td= u.tel
       %td= u.email
       %td= u.departament.name
-      %td.btn-group.btn-group-sm.pull-right
-        = link_to t("action.delete"), user_path(u), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-mini btn-danger'
+      %td.span2
+        .btn-group.btn-group-sm.pull-right
+          = link_to t("action.delete"), user_path(u), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-mini btn-danger'

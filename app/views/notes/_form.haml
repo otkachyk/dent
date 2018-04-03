@@ -1,0 +1,4 @@
+= simple_form_for([@card, @note], html: { class: 'form-horizontal, new-cards-form' }) do |f|
+  = f.input :name
+  = f.input :description
+  = f.submit "Create", class: "btn btn-success"

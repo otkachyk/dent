@@ -7,3 +7,17 @@
     %span.divider
   %li.active
     = @card.l_name + ' ' + @card.f_name
+
+.all-notes
+  - @notes.each do |note|
+    .note
+      .note-title
+        %h6 Title
+        = note.name
+      .note-desc
+        %h6 Description
+        = note.description
+      .note-link
+        =link_to "Details", card_note_path(note)
+.new-note
+  =link_to "New note", new_card_note_path(@card)
